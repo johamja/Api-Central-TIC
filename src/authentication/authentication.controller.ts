@@ -3,7 +3,6 @@ import { AuthenticationService } from './authentication.service';
 import { Request } from 'express';
 import { Authentication_module } from '../modules/authentication_module';
 
-const authenticationModule = new Authentication_module();
 
 @Controller('authentication')
 export class AuthenticationController {
