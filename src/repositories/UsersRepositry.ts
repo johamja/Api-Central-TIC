@@ -7,7 +7,7 @@ import {
   query,
   where,
 } from 'firebase/firestore';
-import { db } from '../Firebase/firebase.context';
+import { db } from '../firebase/firebase.context';
 
 @Injectable()
 export class UsersRepositry {
