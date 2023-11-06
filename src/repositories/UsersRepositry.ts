@@ -1,12 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { User } from '../models/User';
-import {
-  collection,
-  documentId,
-  getDocs,
-  query,
-  where,
-} from 'firebase/firestore';
+import { collection, getDocs } from 'firebase/firestore';
 import { db } from '../firebase/firebase.context';
 
 @Injectable()
