@@ -7,7 +7,8 @@ export class AuthenticationController {
   constructor(private readonly authenticationService: AuthenticationService) {}
 
   @Get()
-  GetAll(): string {
+  GetAll(@Req() req: Request): string {
+    console.log('Conexion establecida con aplicacion conductor ' + req.ip);
     return 'Funciona';
   }
 
@@ -27,6 +28,9 @@ export class AuthenticationController {
 
   @Post('register')
   Register(@Req() req: Request) {
+
+    console.log('Registro usuario ', req.body )
+
     return this.authenticationService.CreateUser(
       req.body.email,
       req.body.password,
